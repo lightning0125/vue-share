@@ -1,0 +1,26 @@
+{
+  "name": "vue-share",
+  "version": "0.1.0",
+  "description": "vue-share-graphql",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && yarn serve",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
+  },
+  "author": "LG",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.6.2"
+  }
+}
