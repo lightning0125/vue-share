@@ -1,4 +1,8 @@
 const { ApolloServer, gql } = require('apollo-server');
+const connectDB = require('./config/db');
+
+// Connect Database
+connectDB();
 
 // The GraphQL schema
 const typeDefs = gql`
