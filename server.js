@@ -1,6 +1,9 @@
 const { ApolloServer, gql } = require('apollo-server');
 const connectDB = require('./config/db');
 
+const User = require('./models/User');
+const Post = require('./models/Post');
+
 // Connect Database
 connectDB();
 
@@ -22,6 +25,10 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: {
+    User,
+    Post
+  }
 });
 
 server.listen().then(({ url }) => {
