@@ -18,9 +18,11 @@
     "apollo-server": "^3.10.2",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
     "graphql": "^16.6.0",
     "jsonwebtoken": "^8.5.1",
     "md5": "^2.3.0",
-    "mongoose": "^6.6.2"
+    "mongoose": "^6.6.2",
+    "path": "^0.12.7"
   }
 }
