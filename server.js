@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, '/schema/typeDefs.gql');
-const typeDefs = fs.readFileSync(filePath, 'utf-8')
+const typeDefs = fs.readFileSync(filePath, 'utf-8');
+const resolvers = require('./schema/resolvers');
 
 const connectDB = require('./config/db');
 
@@ -16,6 +17,7 @@ connectDB();
 
 const server = new ApolloServer({
   typeDefs,
+  resolvers,
   context: {
     User,
     Post
